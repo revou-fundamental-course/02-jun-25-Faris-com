@@ -5,12 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Website - Faris</title>
     <link rel="stylesheet" href="css\style.css">
+    <!-- Icon Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
-    <header></header>
-
-    <main></main>
+    <header class="main-header">
+        <!--logo website-->
+        <div class="main-logo"></div>
+        <button class="menu-toggle" onclick="togglemenu()">☰</button>
+        <nav id="nav-menu">
+            <button class="close-menu" onclick="closemenu()">✖</button>
+            <a class="home-nav" href="#home">Home</a>
+            <a class="profile-nav"href="#Our-Profile">Our Profile</a>
+            <a class="Achievement-nav"href="#Achievement">Achievement</a>
+            <a class="message-nav"href="#message-us">Message Us</a>
+        </nav>
+    </header>
     
-    <footer></footer>
+    <hr/>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h1 id="welcome-message">Welcome to <span class="highlight">RAKYAT UNIVERSITY</span> website</h1>
+            <p><span class="highlight">RAKYAT UNIVERSITY</span>
+                is a place of education that upholds the principles of equality and diversity.
+            <br>
+                This is based on the term <span class="highlight2">"From the people, for the people"</span>.</p>
+
+            <!-- Banner auto-slide -->
+            <div class="banner-img">
+                <div class="slides">
+                <img src="Images\university-banner0.jpg" class="slide" />
+                <img src="Images\university-banner1.jpg" class="slide" />
+                <img src="Images\university-banner2.jpeg" class="slide" />
+                <img src="Images\university-banner3.jpg" class="slide" />
+                </div>
+            </div>
+        </section>
+
+        <hr/>
+
+        <!-- Our Profile Section -->
+        <section id="Our-Profile">
+            <h1>Our Profile</h1>
+
+            <div class="profile-wrapper">
+                <div class="profile" style="background-image: url('images/university-profile.jpg');"></div>
+                <div class="profile" style="background-image: url('images/free-space.jpg');"></div>
+                <div class="profile" style="background-image: url('images/library.jpg');"></div>
+            </div>
+            <h4>Latar Belakang</h4>
+            <p> RAKYAT University is a higher education institution committed to building the future of
+                the nation through quality, inclusive, and relevant education to the needs of the times.
+            </p>
+            <p>
+                RAKYAT University opens the widest possible access for the young generation of Indonesia
+                to develop their potential in various fields of science, ranging from technology,
+                business, education, to social and culture.
+            </p>
+            <p>
+                We believe that education is not just about getting a degree, but about shaping character,
+                honing skills, and creating a real impact on society. Therefore, we prioritize a collaborative,
+                innovative, and real-world practice-oriented learning approach.
+            </p>
+
+            <h4><i class="material-icons">search</i>Visi</h4>
+            <p> To become a leading university that produces future leaders with integrity, creativity,
+                and a positive impact on society.</p>
+            <h4><i class="material-icons">track_changes</i>Misi</h4>
+            <ol>
+                <li>Providing high-quality education that is affordable and inclusive.</li>
+                <li>Encouraging research and innovation for the advancement of the nation.</li>
+                <li>Establishing partnerships with industry and communities for relevant and applicable learning.</li>
+                <li>Developing a campus environment that is humanistic, tolerant, and full of national spirit.</li>
+            </ol>
+        </section>
+
+        <hr/>
+
+        <!-- Achievement Section -->
+        <section id="Achievement">
+            <h1>Our Achievement</h1>
+            <div class="achievement-list">
+                <div class="achievement-image" style="background-image: url('images/medal.jpg');"></div>
+            </div>
+            <div class="achievement-card">
+            <h3>🏆 1st Place National Debate Competition 2024</h3>
+            <p>The RAKYAT University debate team won first place in the national level Indonesian Student Debate Competition.</p>
+            </div>
+
+            <br>
+
+            <div class="achievement-card">
+            <h3>💼 95% of Alumni Employed in Less than 6 Months</h3>
+            <p>Tracer study survey shows that the majority of RAKYAT University graduates are accepted for work within a short time after graduating.</p>
+            </div>
+
+            <br>
+
+            <div class="achievement-card">
+            <h3>🌐 International Collaboration with 10 World Universities</h3>
+            <p>We partner with top institutions such as the University of Tokyo, NUS, and Harvard for exchange and research programs.</p>
+            </div>
+
+            <br>
+
+            <div class="achievement-card">
+            <h3>🔬 Innovative Research on Renewable Energy</h3>
+            <p>RAKYAT University lecturers and students project receives national grant for new generation solar panel research.</p>
+            </div>
+        </section>
+
+        <hr/>
+
+        <!-- Message Us Section -->
+        <section id="message-us">
+        <h1>Message Us</h1>
+            <p>Give us your opinion about us</p>
+
+        <form id="messageForm">
+    <div class="form-group">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" />
+      <div class="error" id="errorNama"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="tanggal">Tanggal Lahir:</label>
+      <input type="date" id="tanggal" name="tanggal" />
+      <div class="error" id="errorTanggal"></div>
+    </div>
+
+    <div class="form-group">
+  <label for="gender">Jenis Kelamin:</label>
+  <div class="radio-group">
+    <label><input type="radio" name="gender" value="pria" /> Pria</label>
+    <label><input type="radio" name="gender" value="wanita" /> Wanita</label>
+  </div>
+  <div class="error" id="errorGender"></div>
+</div>
+
+</div>
+
+    <div class="form-group">
+      <label for="pesan">Pesan:</label>
+      <textarea id="pesan" name="pesan" rows="4"></textarea>
+      <div class="error" id="errorPesan"></div>
+    </div>
+
+    <button type="submit">Kirim</button>
+  </form>
+  <div id="formResult" style="margin-top: 20px;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+        <!-- <form onsubmit="validateform()">
+            <div class="form-group">
+                <label for="nama">Name :</label>
+                    <input type="text" id="nama" name="nama">
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal-lahir">Tanggal Lahir :</label>
+                    <input type="date" id="tanggal-lahir" name="tanggal-lahir" required>
+            </div>
+
+            <div class="form-group">
+                <label>Jenis Kelamin :</label>
+                    <input type="radio" id="pria" name="jenis-kelamin" value="Pria">
+                <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="jenis-kelamin" value="Wanita">
+                <label for="wanita">Wanita</label>
+            </div>
+
+            <div class="form-group">
+                <label for="pesan">Pesan :</label>
+                    <textarea id="pesan" name="pesan" rows="4" required></textarea>
+            </div>
+ 
+            <button onclick="validateform()"; id="submit-form">Submit</button>
+        </form>
+        </section> -->
+
+    </main>
+    
+    <hr/>
+
+    <footer>
+        <p>&copy; Muhammad Faris. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function togglemenu() {
+        document.getElementById("nav-menu").classList.toggle("active");
+        }
+        function closemenu() {
+        document.getElementById("nav-menu").classList.remove("active");
+        }
+    </script>
+    <script>
+    // Selalu tampilkan prompt saat halaman dibuka
+    let userName = prompt("Hello there! What is your name?");
+
+    // Validasi input kosong
+    if (!userName || userName.trim() === "") {
+    userName = "Visitor";
+    }
+
+    // Tampilkan pesan selamat datang
+    const messageElement = document.getElementById("welcome-message");
+    if (messageElement) {
+     messageElement.innerHTML = `Welcome to RAKYAT UNIVERSITY, <span class="username">${userName}</span>!`;
+    }
+</script>
+</script>
 </body>
 </html>

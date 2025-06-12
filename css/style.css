@@ -1,0 +1,380 @@
+html {
+    scroll-padding-top: 70px;
+}
+
+@font-face {
+  font-family: "mycustomfont1";
+  src: url("../font/Gilroy-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mycustomfont2";
+  src: url("../font/Gilroy-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mycustomfont3";
+  src: url("../font/Gilroy-Light.otf") format("opentype"); /* .otf biasanya opentype */
+}
+
+body {
+    background-color: rgb(255, 252, 241);
+    margin-top: 50px;
+}
+    h1 {
+    font-family: "mycustomfont1", sans-serif;
+    }
+    h4 {
+    font-family: "mycustomfont2", sans-serif; 
+    }
+    p {
+    font-family: "mycustomfont3", sans-serif;
+    }
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    flex-wrap: wrap;
+
+    position: fixed;
+      top: 0;
+      left: 0;
+      width:100%;
+      background-color: white;
+      z-index: 10;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.username {
+    color : #1f70d1
+}
+.menu-toggle, .close-menu {
+  position: absolute;
+  top: 8px;
+  right: 40px; /* memindahkan ke kanan */
+  vertical-align: middle;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  z-index: 1000;
+  cursor: pointer;
+  display: none; /* default disembunyikan, muncul via media query */
+}
+
+
+
+
+
+/* .menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: auto;
+  background-color: #4d96ff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 10px;
+} */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .main-logo {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .menu-toggle {
+    display: block;  /* tampilkan ☰ saat mobile */
+  }
+
+  #nav-menu.active .close-menu {
+    display: block;  /* tampilkan ✖ saat menu aktif */
+  }
+
+  .close-menu {
+    display: none;  /* default hidden */
+  }
+
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #nav-menu.active {
+  display: flex;
+    }
+
+  #nav-menu a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    background-image: url('../images/Rakyat.png');
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0px;
+    margin-right: 53px;
+}
+
+nav a {
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #4d96ff;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #1f70d1;
+}
+
+.highlight {
+    color: #4d96ff;
+}
+
+.highlight2 {
+    color: #fe6c6d;
+}
+
+section {
+    min-height: 400px;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+}
+
+.banner-img {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  opacity:80%;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* @keyframes slide {
+  0%   { transform: translateX(0%); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+} */
+
+.profile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.profile {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.material-icons {
+    font-size: 28px;
+    color: #2c3e50;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.achievement-image {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* ========= FORM STYLE ========= */
+
+/* ====== FORM CONTAINER ====== */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== SECTION TITLE CENTERED ====== */
+#message-us {
+  text-align: center;
+}
+
+/* ====== FORM ELEMENTS ====== */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* ====== RADIO GROUP ====== */
+.form-group {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: normal;
+}
+
+/* ====== ERROR TEXT ====== */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* ====== SUBMIT BUTTON ====== */
+button {
+  padding: 10px 20px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* ========= RESPONSIVE MEDIA QUERIES ========= */
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .banner-img {
+        height: 40vh;
+    }
+
+    .profile {
+        height: 140px;
+        width: 140px;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .material-icons {
+        font-size: 24px;
+    }
+
+    .profile {
+        height: 120px;
+        width: 120px;
+    }
+
+    .banner-img {
+        height: 35vh;
+    }
+}
