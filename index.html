@@ -56,7 +56,7 @@
                 <div class="profile" style="background-image: url('Images/free-space.jpg');"></div>
                 <div class="profile" style="background-image: url('Images/library.jpg');"></div>
             </div>
-            <h4>Latar Belakang</h4>
+            <h4>Background</h4>
             <p> RAKYAT University is a higher education institution committed to building the future of
                 the nation through quality, inclusive, and relevant education to the needs of the times.
             </p>
@@ -71,10 +71,10 @@
                 innovative, and real-world practice-oriented learning approach.
             </p>
 
-            <h4><i class="material-icons">search</i>Visi</h4>
-            <p> To become a leading university that produces future leaders with integrity, creativity,
+            <h4><i class="material-icons">search</i>Vision</h4>
+            <p>To become a leading university that produces future leaders with integrity, creativity,
                 and a positive impact on society.</p>
-            <h4><i class="material-icons">track_changes</i>Misi</h4>
+            <h4><i class="material-icons">track_changes</i>Mision</h4>
             <ol>
                 <li>Providing high-quality education that is affordable and inclusive.</li>
                 <li>Encouraging research and innovation for the advancement of the nation.</li>
@@ -210,6 +210,7 @@
     </script>
     <script>
     // Selalu tampilkan prompt saat halaman dibuka
+    window.onload = function () {
     let userName = prompt("Hello there! What is your name?");
 
     // Validasi input kosong
@@ -222,6 +223,7 @@
     if (messageElement) {
      messageElement.innerHTML = `Welcome to RAKYAT UNIVERSITY, <span class="username">${userName}</span>!`;
     }
+}
 </script>
 </script>
 <script>
